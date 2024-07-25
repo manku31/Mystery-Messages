@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-email/components": "^0.0.21",
     "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^2.4.3",
     "next": "14.2.5",
     "next-auth": "^4.24.7",
     "react": "^18",

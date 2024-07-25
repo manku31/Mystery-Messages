@@ -22,9 +22,9 @@ export const authOptions: NextAuthOptions = {
 
         try {
           /* find the user with credentials
-            - find by email 
-            - Or by username 
-          */
+           * - find by email
+           * - Or by username
+           */
           const user = await UserModel.findOne({
             $or: [
               { email: credentials.identifier },
@@ -40,10 +40,10 @@ export const authOptions: NextAuthOptions = {
             throw new Error("Please verify the account before login");
 
           /* credentials (username or email) match in DB
-            - Check Password
-              - if password is correct return user
-              - else throw error  
-          */
+           * - Check Password
+           *   - if password is correct return user
+           *   - else throw error
+           */
           const isPasswordCorrect = await bcrypt.compare(
             credentials.password,
             user.password
@@ -61,8 +61,8 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       /* If user is there
-          - add user details in token
-            - Purpose(user details are accessible if we have a token) 
+       * - add user details in token
+       * - Purpose(user details are accessible if we have a token)
        */
       if (user) {
         token._id = user._id?.toString();
@@ -75,8 +75,8 @@ export const authOptions: NextAuthOptions = {
 
     async session({ session, token }) {
       /* If token is there
-          - add token details in session.user
-            - Purpose(token contain user details, so user details are accessible if we have a session) 
+       * - add token details in session.user
+       * - Purpose(token contain user details, so user details are accessible if we have a session)
        */
       if (token) {
         session.user._id = token._id;

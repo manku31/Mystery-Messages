@@ -32,11 +32,10 @@ export async function POST(request: Request) {
     const existingUserByEmail = await UserModel.findOne({ email });
     const verifyCode = Math.floor(100000 + Math.random() * 900000).toString();
 
-    /* 
-    - If user alredy existed  by email
-        - if user exist and verified
-        - else verify the existing user
-    - else create new user
+    /*  If user alredy existed  by email
+     *  - Check user is verified
+     *  - else verify the existing user
+     *  Else create new user
      */
     if (existingUserByEmail) {
       if (existingUserByEmail.isVerified) {
