@@ -61,7 +61,7 @@ export async function POST(request: Request) {
       const expiryDate = new Date();
       expiryDate.setHours(expiryDate.getHours() + 1);
 
-      const newuser = new UserModel({
+      const newUser = new UserModel({
         username,
         email,
         password: hasedPassword,
@@ -72,7 +72,7 @@ export async function POST(request: Request) {
         messages: [],
       });
 
-      await newuser.save();
+      await newUser.save();
     }
     //---------------------------------------------------------------------------------------//
 
@@ -82,6 +82,8 @@ export async function POST(request: Request) {
       username,
       verifyCode
     );
+
+    console.log("emailResponse : ", emailResponse);
 
     if (!emailResponse.success) {
       return Response.json(

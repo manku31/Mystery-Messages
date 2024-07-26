@@ -68,7 +68,7 @@ const UserSchema: Schema<User> = new Schema({
 });
 
 const UserModel =
-  (mongoose.models.user as mongoose.Model<User>) || // if model is allredy created
+  (mongoose.models.User as mongoose.Model<User>) || // if model is allredy created
   mongoose.model<User>("User", UserSchema); // if booting 1st time...create model
 
 export default UserModel;
