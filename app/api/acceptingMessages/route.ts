@@ -7,7 +7,6 @@ export async function POST(request: Request) {
   await dbConnect();
 
   const session = await getServerSession(authOptions);
-  const user: User = session?.user as User;
 
   if (!session || !session.user) {
     return Response.json(
@@ -19,6 +18,7 @@ export async function POST(request: Request) {
     );
   }
 
+  const user: User = session?.user as User;
   const userId = user._id;
   const { acceptMessages } = await request.json();
 
@@ -68,7 +68,6 @@ export async function GET(request: Request) {
   await dbConnect();
 
   const session = await getServerSession(authOptions);
-  const user: User = session?.user as User;
 
   if (!session || !session.user) {
     return Response.json(
@@ -80,6 +79,7 @@ export async function GET(request: Request) {
     );
   }
 
+  const user: User = session?.user as User;
   const userId = user._id;
 
   try {
