@@ -17,9 +17,13 @@ export async function middleware(request: NextRequest) {
     if (
       url.pathname.startsWith("/signin") ||
       url.pathname.startsWith("/signup") ||
-      url.pathname.startsWith("/") ||
       url.pathname.startsWith("/verify")
     ) {
+      return NextResponse.redirect(new URL("/dashboard", request.url));
+    } else if (url.pathname === "/dashboard") {
+      // If user is already on the dashboard, don't redirect
+      return NextResponse.next();
+    } else if (url.pathname === "/") {
       return NextResponse.redirect(new URL("/dashboard", request.url));
     }
   } else {
