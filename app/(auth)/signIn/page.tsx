@@ -58,7 +58,7 @@ export default function SignIn() {
       }
 
       if (response?.url) {
-        router.replace("/dashboad");
+        router.replace("/dashboard");
       }
     } catch (error) {
       console.error("Error in sign in, Error : ", error);
