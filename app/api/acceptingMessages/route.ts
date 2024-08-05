@@ -4,6 +4,7 @@ import { authOptions } from "../auth/[...nextauth]/options";
 import UserModel from "@/model/User";
 
 export async function POST(request: Request) {
+  7;
   await dbConnect();
 
   const session = await getServerSession(authOptions);
@@ -41,13 +42,23 @@ export async function POST(request: Request) {
       );
     }
 
-    return Response.json(
-      {
-        success: true,
-        message: "User status for accepting messages updated successfully",
-      },
-      { status: 200 }
-    );
+    if (acceptMessages === true) {
+      return Response.json(
+        {
+          success: true,
+          message: "User accepting messages now",
+        },
+        { status: 200 }
+      );
+    } else {
+      return Response.json(
+        {
+          success: true,
+          message: "User not accepting messages now",
+        },
+        { status: 200 }
+      );
+    }
   } catch (error) {
     console.error(
       "Failed in update user status to accept messages, error :",

@@ -36,43 +36,58 @@ export default function MessageCard({
   const { toast } = useToast();
 
   async function handelDeleteMessage() {
-    const response = await axios.delete(`/api/deleteMessage/${message.id}`);
+    const response = await axios.delete(`/api/deleteMessage/${message._id}`);
+    console.log("response", response);
+
     toast({
       title: response.data.messages,
     });
-    onMessageDelete(message.id);
+    onMessageDelete(message._id);
   }
 
+  const formattedDate = new Date(message.createAt)
+    .toLocaleString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    })
+    .replace(",", " at")
+    .replace(/\//g, "-");
+
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Card Title</CardTitle>
+    <Card className="flex flex-row items-center">
+      <div className="flex-grow">
+        <CardHeader>
+          <CardTitle>{message.content}</CardTitle>
+        </CardHeader>
+        <CardFooter>{formattedDate}</CardFooter>
+      </div>
 
-        <AlertDialog>
-          <AlertDialogTrigger asChild>
-            <Button variant="destructive">
-              <X className="w-5 h-5" />{" "}
-            </Button>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-              <AlertDialogDescription>
-                This action cannot be undone. This will permanently delete the
-                message and remove the data from our servers.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={handelDeleteMessage}>
-                Continue
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
-
-        <CardDescription>Card Description</CardDescription>
-      </CardHeader>
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <Button variant="destructive" className="ml-auto mr-4">
+            <X className="w-5 h-5" />
+          </Button>
+        </AlertDialogTrigger>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete the
+              message and remove the data from our servers.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handelDeleteMessage}>
+              Continue
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </Card>
   );
 }
