@@ -6,6 +6,7 @@ export async function POST(request: Request) {
   await dbConnect();
 
   const { username, content } = await request.json();
+
   try {
     const user = await UserModel.findOne({ username });
 
@@ -45,7 +46,7 @@ export async function POST(request: Request) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error in sending message, Error : ", error);
+    console.error("Error in sending message,", error);
     return Response.json(
       {
         success: false,
