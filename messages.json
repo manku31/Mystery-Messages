@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Message from JohnDoe",
+    "content": "Hey, How are you doing today?",
+    "received": "10 minutes ago"
+  },
+  {
+    "title": "Message from JaneSmith",
+    "content": "Can we schedule a meeting for tomorrow?",
+    "received": "20 minutes ago"
+  },
+  {
+    "title": "Message from MarkJohnson",
+    "content": "I have reviewed the project proposal, and it looks great!",
+    "received": "1 hour ago"
+  },
+  {
+    "title": "Message from EmilyBrown",
+    "content": "Please send over the latest version of the report.",
+    "received": "2 hours ago"
+  },
+  {
+    "title": "Message from AlexWilliams",
+    "content": "Thanks for the update. Let's proceed with the next steps.",
+    "received": "3 hours ago"
+  },
+  {
+    "title": "Message from SarahDavis",
+    "content": "Are there any changes to the project timeline?",
+    "received": "4 hours ago"
+  },
+  {
+    "title": "Message from MichaelClark",
+    "content": "I'm having trouble accessing the documents. Can you help?",
+    "received": "5 hours ago"
+  },
+  {
+    "title": "Message from JessicaTaylor",
+    "content": "The team is excited about the new features. Great work!",
+    "received": "6 hours ago"
+  },
+  {
+    "title": "Message from RobertMartinez",
+    "content": "Let's touch base next week to discuss the progress.",
+    "received": "7 hours ago"
+  },
+  {
+    "title": "Message from OliviaAnderson",
+    "content": "Could you please provide an update on the current status?",
+    "received": "8 hours ago"
+  }
+]
