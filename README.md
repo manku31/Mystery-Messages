@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mystery Message
 
-## Getting Started
+**Mystery Message is a full-stack web application built using Next.js. It allows users to send and receive anonymous messages or feedback. This encourages honest and candid communication, as the sender's identity is not revealed. The UI is designed with Shadcn to ensure a clean and modern look.**
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Links
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ - **Live Link** : [Live URL](https://akeshya-767.pages.dev)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ - Anonymous Messaging: Send and receive messages without revealing the sender's identity.
+ - User Authentication: Secure login and registration system.
+ - Feedback System: Users can provide honest feedback anonymously.
+ - Modern UI: Designed with Shadcn for a sleek and intuitive user experience.
+ - Responsive Design: Works on all device sizes.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+ - Frontend: Next.js, React.js, Shadcn
+ - Backend: Node.js, Next.js
+ - Database: MongoDB
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screen Short
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**1. Home Page**
+  ![image](https://github.com/manku31/Akeshya/assets/88385550/1f583954-e36e-4d02-acb2-33bf91efe88c)
 
-## Deploy on Vercel
+**2. About Page**
+  ![image](https://github.com/manku31/Akeshya/assets/88385550/cd935eef-6bd3-450d-a459-87f39fa2c50d)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**3. Service Page**
+  ![image](https://github.com/manku31/Akeshya/assets/88385550/f21407db-6a60-4850-982d-54306bb699d0)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**4. Contact us Page**
+  ![image](https://github.com/manku31/Akeshya/assets/88385550/dddf9a01-36d7-4fd5-b24d-f18076a29bd9)
+
+**5. Response save Modal**
+  ![image](https://github.com/manku31/Akeshya/assets/88385550/882ab6cf-9952-4c17-bf0d-babf61d0f600)
+
+
+
+
+---
+
+
+
+
+
+## Follow these steps to run this on your local machine:
+
+### Prerequisites
+
+    - Node.js (v14.x or later)
+    - npm (v6.x or later)
+    - Git
+
+
+### Clone the repository 
+    - git clone https://github.com/manku31/Akeshya.git
+
+
+### Setting up the project in your machine
+
+  1. Navigate to Mystery-Messages diectory
+
+  2. Install the dependencies
+    - **npm install**
+     
+  2. Create .env.loca file
+
+  2. Add Private key
+    - MONGODB_URL
+    - NEXTAUTH_SECRET
+     
+  4. start the server
+    - **npm run dev**
+     
+  5. Open any browser (like chrome) and hit this url
+    - **http://localhost:3000**
+  
