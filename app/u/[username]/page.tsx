@@ -61,28 +61,28 @@ export default function UserPage() {
 
   return (
     <>
-      <div className="my-8 mx-4 md:mx-8 lg:mx-auto p-6 bg-white rounded w-full max-w-6xl">
-        <h1 className="text-4xl font-bold mb-4 text-center">
+      <div className="my-8 mx-4 md:mx-8 lg:mx-auto p-6 bg-white rounded w-full max-w-6xl shadow-lg">
+        <h1 className="text-4xl font-bold mb-4 text-center text-gray-800">
           Public Profile Link
         </h1>
         <div className="mb-4">
-          <h2 className="text-lg font-semibold mb-2">
+          <h2 className="text-lg font-semibold mb-2 text-gray-700">
             Send Anonymous Message to @{params.username}
           </h2>
-          <div className="flex items-center">
+          <div className="flex items-center border border-gray-300 rounded-lg p-4 bg-gray-50">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-8"
+                className="space-y-4 w-full"
               >
                 <FormField
                   name="content"
                   control={form.control}
                   render={({ field, formState }) => (
-                    <FormItem>
+                    <FormItem className="w-full">
                       <FormControl>
                         <Input
-                          className="input border w-full p-2 mr-2 "
+                          className="input w-full p-2 rounded-md border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200"
                           placeholder="Write your anonymous message here"
                           {...field}
                         />
@@ -92,7 +92,11 @@ export default function UserPage() {
                   )}
                 />
 
-                <Button type="submit" disabled={loading}>
+                <Button
+                  type="submit"
+                  disabled={loading}
+                  className="p-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200 "
+                >
                   {loading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please
@@ -104,12 +108,6 @@ export default function UserPage() {
                 </Button>
               </form>
             </Form>
-
-            {/* <input
-              type="text"
-              className="input border w-full p-2 mr-2"
-              placeholder="Write your anonymous message here"
-            /> */}
           </div>
         </div>
       </div>
