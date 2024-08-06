@@ -3,10 +3,6 @@
 **Mystery Message is a full-stack web application built using Next.js. It allows users to send and receive anonymous messages or feedback. This encourages honest and candid communication, as the sender's identity is not revealed. The UI is designed with Shadcn to ensure a clean and modern look.**
 
 
-## Links
-
- - **Live Link** : [Live URL](https://akeshya-767.pages.dev)
-
 ## Features
 
  - Anonymous Messaging: Send and receive messages without revealing the sender's identity.
