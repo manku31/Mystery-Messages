@@ -23,23 +23,14 @@
 
 ## Screen Short
 
-**1. Home Page**
-  ![image](https://github.com/manku31/Akeshya/assets/88385550/1f583954-e36e-4d02-acb2-33bf91efe88c)
+**1. Dashboard Page**
+  ![image](https://github.com/user-attachments/assets/5c2b15f6-49ae-481c-bb2d-947b53bfc916)
 
-**2. About Page**
-  ![image](https://github.com/manku31/Akeshya/assets/88385550/cd935eef-6bd3-450d-a459-87f39fa2c50d)
+**2. SignIn and SignUp Page**
+  ![image](https://github.com/user-attachments/assets/37f5be92-cdd1-4bbe-a032-c6aab226b837)
 
-**3. Service Page**
-  ![image](https://github.com/manku31/Akeshya/assets/88385550/f21407db-6a60-4850-982d-54306bb699d0)
-
-**4. Contact us Page**
-  ![image](https://github.com/manku31/Akeshya/assets/88385550/dddf9a01-36d7-4fd5-b24d-f18076a29bd9)
-
-**5. Response save Modal**
-  ![image](https://github.com/manku31/Akeshya/assets/88385550/882ab6cf-9952-4c17-bf0d-babf61d0f600)
-
-
-
+**3. Public Message Page**
+  ![image](https://github.com/user-attachments/assets/e42102d2-eb8f-4376-a904-e231d93ecb1b)
 
 ---
 
@@ -57,7 +48,7 @@
 
 
 ### Clone the repository 
-    - git clone https://github.com/manku31/Akeshya.git
+    - git clone https://github.com/manku31/Mystery-Messages.git
 
 
 ### Setting up the project in your machine
