@@ -6,8 +6,6 @@
 ## Links
 
  - **Live Link** : [Live URL](https://akeshya-767.pages.dev)
- - **Email** : admin@xyz.com
- - **Password** : admin@xyz.com
 
 ## Features
 
